@@ -3,6 +3,7 @@ import data from './data.js';
 import path, { dirname } from 'path';
 import { fileURLToPath } from 'url';
 
+const __dirname = dirname(fileURLToPath(import.meta.url));
 const app = express();
 
 app.use(express.static(path.join(__dirname, '/build')));
